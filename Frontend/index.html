@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detective Game by Aarush</title>
+
+  <style>
+    body {
+      font-family: Michroma;
+      background: #0A0A0A;
+      color: #F5F5F5;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #D4AF37;
+      margin-bottom: 5px;
+    }
+
+    .container {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    #evidence, #suspects, #chat {
+      flex: 1;
+      background: #1A1A1A;
+      padding: 15px;
+      border-radius: 12px;
+      min-height: 420px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .item {
+      background: #8B0000;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .item:hover {
+      background: #2d3652;
+    }
+
+    .selected {
+      background: #ffb300 !important;
+      color: black;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #2a2f45;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #3a4160;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🧠 Detective Case System v3</h1>
+
+<div class="container">
+
+  <div id="evidence">
+    <h3>📂 Evidence Board</h3>
+    <div id="evidenceBox"></div>
+
+    <button onclick="nextClue()">Next Clue</button>
+  </div>
+
+  <div id="suspects">
+    <h3>👤 Suspects</h3>
+    <div id="suspectBox"></div>
+
+    <button onclick="confirm()">Accuse</button>
+    <button onclick="newCase()">New Case</button>
+  </div>
+
+  <div id="chat">
+    <h3>💬 Interrogation</h3>
+    <div id="chatBox">Select a suspect</div>
+  </div>
+
+</div>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
